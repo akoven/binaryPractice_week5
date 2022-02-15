@@ -3,7 +3,18 @@
 /******************************************************************************/
 
 const convertToBase2 = element => {
-  // Your code here
+    if (typeof element === 'string') {
+      let newArr = element.split('')
+      let num = null;
+      newVal = newArr.slice(0,2).join('');
+      if(newVal === '0x'){
+        num = parseInt(element, 16);
+    }
+    let newNum = num.toString(2)
+    return `0b${newNum}`
+  }
+    let newNum = element.toString(2)
+    return `0b${newNum}`
 };
 
 /******************************************************************************/
