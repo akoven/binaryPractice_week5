@@ -3,7 +3,12 @@
 /******************************************************************************/
 
 const convertToBase16 = element => {
-  // Your code here
+  if(typeof element !== 'string'){
+    return '0x'+ element.toString(16)
+  }else{
+    let newVal = parseInt(element.substring(2), 2)
+    return '0x'+newVal.toString(16)
+  }
 };
 
 /******************************************************************************/
