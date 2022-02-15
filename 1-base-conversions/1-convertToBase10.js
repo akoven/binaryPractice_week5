@@ -3,8 +3,15 @@
 /******************************************************************************/
 
 const convertToBase10 = str => {
-  // Your code here
-};
+  let newArr = str.split('')
+    newVal = newArr.slice(0,2).join('');
+    if(newVal === '0x'){
+      return parseInt(str, 16)
+    }else{
+      return parseInt(str.substring(2), 2)
+    }
+}
+
 
 /******************************************************************************/
 
